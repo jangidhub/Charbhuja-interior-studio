@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #F8F6F2;
+    --surface-warm: #F0ECE5;
+    --surface-white: #FFFFFF;
+    --ink: #29231E;
+    --muted: #77716A;
+    --accent: #68452D;
+    --accent-hover: #523724;
+    --accent-teak: #A17A58;
+    --border-warm: #E7E1D9;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--ink);
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes gentleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.gentle-bounce {
+  animation: gentleBounce 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gentle-bounce {
+    animation: none;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
